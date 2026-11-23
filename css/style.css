@@ -211,7 +211,7 @@ h1, h2, h3, p { margin: 0; }
   .hero-img { max-height: none; }
   .hero::after { height: 34%; }
   .hero-copy { position: relative; bottom: auto; margin-top: -26px; padding-bottom: 8px; }
-  .hero-logo { font-size: clamp(40px, 13.5vw, 72px); }
+  
   .hero-btns { gap: 18px; flex-direction: column; align-items: stretch; padding-inline: 10px; }
   .hero-sub { letter-spacing: .18em; }
   .fair { flex-direction: column; gap: 10px; padding: 28px 22px; text-align: center; }
@@ -231,3 +231,10 @@ h1, h2, h3, p { margin: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- logo images (2026-11-24: the owner's wordmark replaces the text logo) ---------- */
+.logo-img { display: block; height: 40px; width: auto; }
+.logo-sm .logo-img { height: 34px; }
+.hero-logo { font-size: 0; line-height: 0; }
+.hero-logo img { display: block; margin-inline: auto; width: clamp(280px, 52vw, 720px); height: auto; max-width: 100%; filter: drop-shadow(0 0 16px #0b0716) drop-shadow(0 0 16px #0b0716) drop-shadow(0 0 44px #0b0716d0); }
+@media (max-width: 720px) { .logo-img { height: 34px; } .hero-logo img { width: min(86vw, 420px); } }
